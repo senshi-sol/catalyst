@@ -1,43 +1,33 @@
-// SPDX-License-Identifier: Apache 2
-
+// SPDX-License-Identifier: MIT 
 pragma solidity ^0.8.21;
-pragma abicoder v2;
 
-import './ITokenBridge.sol';
-import "./Structs.sol";
-import 'solidity-bytes-utils/contracts/BytesLib.sol';
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
 
-/// @title Helper library for cross-chain swaps
-/// @notice Contains functions necessary for parsing encoded VAAs
-/// and structs containing swap parameters
-library SwapHelper {
-    using BytesLib for bytes;
+contract SwapHelper {
+    using SafeERC20 for IERC20;
 
-    struct CustomPayload {
-        address recipientAddress;
-        address targetToken;
+    ISwapRouter public uniswapRouter;
+    IERC20 public catalystToken;
+
+    constructor(address _uniswapRouter, address _catalystToken) {
+        uniswapRouter = ISwapRouter(_uniswapRouter);
+        catalystToken = IERC20(_catalystToken);
     }
 
-    /// @dev Parameters parsed from a VAA for executing swaps
-    /// on the destination chain
-    struct DecodedVaaParameters {
-        // Token Bridge TransferWithPayload named params
-        Structs.TransferWithPayload transferPayload;
-        CustomPayload customPayload;
-    }
+    function swap(uint256 amountIn, uint256 amountOutMin, address[] calldata path) external {
+        catalystToken.safeTransferFrom(msg.sender, address(this), amountIn);
+        catalystToken.approve(address(uniswapRouter), amountIn);
 
-    /// @dev Decodes parameters encoded in a VAA
-    function decodeVaaPayload(
-        bytes memory customPayload
-    ) public view returns (CustomPayload memory decoded) {
-        uint index = 0;
-
-        decoded.recipientAddress = customPayload.toAddress(index);
-        index += 32;
-
-        decoded.targetToken = customPayload.toAddress(index);
-        index += 32;
-
-        require(customPayload.length == index, "invalid payload length");
+        uniswapRouter.exactInput(
+            ISwapRouter.ExactInputParams({
+                path: path,
+                recipient: msg.sender,
+                deadline: block.timestamp + 1200,
+                amountIn: amountIn,
+                amountOutMinimum: amountOutMin
+            })
+        );
     }
 }
