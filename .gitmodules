@@ -10,3 +10,6 @@
 [submodule "Catalyst-contracts/lib/v3-sdk"]
 	path = Catalyst-contracts/lib/v3-sdk
 	url = https://github.com/uniswap/v3-sdk
+[submodule "Catalyst-contracts/lib/sdk-core"]
+	path = Catalyst-contracts/lib/sdk-core
+	url = https://github.com/uniswap/sdk-core
