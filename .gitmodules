@@ -13,3 +13,6 @@
 [submodule "Catalyst-contracts/lib/sdk-core"]
 	path = Catalyst-contracts/lib/sdk-core
 	url = https://github.com/uniswap/sdk-core
+[submodule "Catalyst-contracts/lib/solidity-bytes-utils"]
+	path = Catalyst-contracts/lib/solidity-bytes-utils
+	url = https://github.com/GNSPS/solidity-bytes-utils
