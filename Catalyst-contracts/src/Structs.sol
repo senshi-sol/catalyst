@@ -1,7 +1,7 @@
 // contracts/Structs.sol
 // SPDX-License-Identifier: Apache 2
 
-pragma solidity ^0.7.6;
+pragma solidity ^0.8.21;
 pragma abicoder v2;
 
 interface Structs {
