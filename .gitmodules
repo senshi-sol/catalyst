@@ -7,3 +7,6 @@
 [submodule "Catalyst-contracts/lib/openzeppelin-contracts"]
 	path = Catalyst-contracts/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "Catalyst-contracts/lib/v3-sdk"]
+	path = Catalyst-contracts/lib/v3-sdk
+	url = https://github.com/uniswap/v3-sdk
