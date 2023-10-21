@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import web3 from '../lib/web3';
+import web3 from '../../lib/web3';
 
 const MetaMask: React.FC = () => {
     const [account, setAccount] = useState<string>('');
