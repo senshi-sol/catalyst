@@ -1,28 +1,57 @@
-## Getting Started
+# Docus Starter
 
-First, run the development server:
+Starter template for [Docus](https://docus.dev).
+
+## Clone
+
+Clone the repository (using `nuxi`):
+
+```bash
+npx nuxi init -t themes/docus
+```
+
+## Setup
+
+Install dependencies:
+
+```bash
+yarn install
+```
+
+## Development
 
 ```bash
 yarn dev
 ```
 
-Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
+## Edge Side Rendering
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Can be deployed to Vercel Functions, Netlify Functions, AWS, and most Node-compatible environments.
 
-To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, like `api/hello/route.ts` would map to [http://localhost:3001/api/hello](http://localhost:3001/api/hello).
+Look at all the available presets [here](https://v3.nuxtjs.org/guide/deploy/presets).
 
-## Learn More
+```bash
+yarn build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Static Generation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
+Use the `generate` command to build your application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The HTML files will be generated in the .output/public directory and ready to be deployed to any static compatible hosting.
 
-## Deploy on Vercel
+```bash
+yarn generate
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
+## Preview build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You might want to preview the result of your build locally, to do so, run the following command:
+
+```bash
+yarn preview
+```
+
+---
+
+For a detailed explanation of how things work, check out [Docus](https://docus.dev).
