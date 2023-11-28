@@ -19,6 +19,8 @@
     "node": ">=18"
   },
   "dependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "husky": "^8.0.3"
   }
 }

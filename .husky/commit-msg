@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Get the commit message
+message=$(cat "$1")
+
+# Check if the commit message starts with one of the allowed keywords
+allowedKeywords="fix feat ui component package add docs style refactor test chore app build deps dev infra add change remove update revert"
+
+found=false
+for keyword in $allowedKeywords; do
+    if [[ $message =~ ^$keyword:.* ]]; then
+        found=true
+        break
+    fi
+done
+
+if ! $found; then
+    echo "Commit message must start with one of the following keywords: $allowedKeywords"
+    exit 1
+fi
+
+exit 0
