@@ -1,22 +1,10 @@
 #!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-# Get the commit message
-message=$(cat "$1")
+COMMIT_REGEX="^(fix|feat|ui|component|package|add|docs|style|refactor|test|chore|app|build|deps|dev|infra|change|remove|update|revert): .+"
+ERROR_MSG="Commit message should start with fix:, feat:, ui:, component:, etc."
 
-# Check if the commit message starts with one of the allowed keywords
-allowedKeywords="fix feat ui component package add docs style refactor test chore app build deps dev infra add change remove update revert"
-
-found=false
-for keyword in $allowedKeywords; do
-    if [[ $message =~ ^$keyword:.* ]]; then
-        found=true
-        break
-    fi
-done
-
-if ! $found; then
-    echo "Commit message must start with one of the following keywords: $allowedKeywords"
-    exit 1
+if ! grep -qE "$COMMIT_REGEX" "$1"; then
+  echo "$ERROR_MSG" >&2
+  exit 1
 fi
-
-exit 0
