@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import {Button} from '@catalyst/ui';
 import SearchBar from '../Input/SearchBar';
@@ -41,4 +43,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export {Navbar};
