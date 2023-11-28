@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import {Button} from '../button';
+import {Button} from '../../../components/ui/button';
 import SearchBar from '../Input/SearchBar';
-import { Catalyst, SearchIcon, MenuIcon } from '../assets';
+import { Catalyst, SearchIcon, MenuIcon } from '../../../components/assets/index';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,14 +9,13 @@ const Navbar = () => {
   return (
     <nav className="relative container mx-auto p-6 bg-transparent">
       <div className="flex items-center justify-between">
-        <Logo />
+        <Catalyst />
 
         <div className="hidden md:block">
-          <Search />
+          <SearchIcon />
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <Button variant="solid">Docs</Button>
           <Button variant="solid">Articles</Button>
           <Button variant="border">Learn</Button>
           <Button variant="solid">Sign Up!</Button>

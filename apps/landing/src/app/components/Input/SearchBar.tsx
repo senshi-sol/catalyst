@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import { SearchIcon } from '../assets';
-import { Button } from '../button/index';
+import { SearchIcon } from '../../../components/assets/SearchIcon';
+import { Button } from '../../../components/ui/button';
 
 type SearchBarProps = {
   roundness?: 'none' | 'sm' | 'md' | 'lg' | 'full';
