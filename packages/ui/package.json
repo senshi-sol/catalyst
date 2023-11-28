@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "@catalyst/ui",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,9 +11,12 @@
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "@nextui-org/react-utils": "^2.0.10",
+    "@nextui-org/ripple": "^2.0.24",
     "@nextui-org/shared-utils": "^2.0.4",
+    "@nextui-org/spinner": "^2.0.24",
     "@nextui-org/system": "^2.0.15",
     "@nextui-org/theme": "^2.1.17",
+    "@nextui-org/use-aria-button": "^2.0.6",
     "@nextui-org/use-image": "^2.0.4",
     "@react-aria/focus": "^3.15.0",
     "@react-aria/interactions": "^3.20.0",
