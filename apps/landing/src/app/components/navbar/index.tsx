@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import {Button} from '../../../components/ui/button';
+import {Button} from '@catalyst/ui';
 import SearchBar from '../Input/SearchBar';
-import { Catalyst, SearchIcon, MenuIcon } from '../../../components/assets/index';
+import { Catalyst, SearchIcon, MenuIcon, CrossIcon } from '../../../components/assets/index';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-4">
           <Button variant="solid">Articles</Button>
-          <Button variant="border">Learn</Button>
+          <Button variant="bordered">Learn</Button>
           <Button variant="solid">Sign Up!</Button>
         </div>
 
@@ -25,7 +25,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden block hamburger"
         >
-          {isOpen ? <Cross className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? <CrossIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
         </button>
       </div>
 
@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className='flex flex-col items-center space-y-4'>
           <Button variant="solid">Docs</Button>
           <Button variant="solid">Articles</Button>
-          <Button variant="border">Learn</Button>
+          <Button variant="bordered">Learn</Button>
           <Button variant="solid">Sign Up!</Button>
         </div>
       </div>

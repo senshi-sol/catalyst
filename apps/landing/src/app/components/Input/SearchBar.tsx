@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SearchIcon } from '../../../components/assets/SearchIcon';
-import { Button } from '../../../components/ui/button';
+import { Button } from '@catalyst/ui';
 
 type SearchBarProps = {
   roundness?: 'none' | 'sm' | 'md' | 'lg' | 'full';

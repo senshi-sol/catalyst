@@ -8,6 +8,13 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "exports": {
+		".": "./components/index.ts",
+		"./postcss": "./style/postcss.config.js",
+		"./tailwind": "./style/tailwind.ts",
+		"./styles": "./style/globals.css",
+		"./package.json": "./package.json"
+	},
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "@nextui-org/react-utils": "^2.0.10",
