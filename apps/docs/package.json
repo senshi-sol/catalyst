@@ -1,5 +1,5 @@
 {
-  "name": "docus-starter",
+  "name": "documentation",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,5 +17,8 @@
     "@types/node": "^20.8.2",
     "eslint": "^8.50.0",
     "nuxt": "^3.7.4"
+  },
+  "dependencies": {
+    "docs": "link:"
   }
 }
