@@ -32,6 +32,10 @@ importers:
         version: 1.10.16
 
   apps/docs:
+    dependencies:
+      docs:
+        specifier: 'link:'
+        version: 'link:'
     devDependencies:
       '@nuxt-themes/docus':
         specifier: latest

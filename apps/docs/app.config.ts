@@ -1,11 +1,11 @@
 export default defineAppConfig({
   docus: {
-    title: 'Docus',
-    description: 'The best place to start your documentation.',
-    image: 'https://user-images.githubusercontent.com/904724/185365452-87b7ca7b-6030-4813-a2db-5e65c785bf88.png',
+    title: 'Catalyst',
+    description: 'Documentation for Catalyst.',
+    image: 'https://github.com/vivekpal1.png',
     socials: {
-      twitter: 'nuxt_js',
-      github: 'nuxt-themes/docus',
+      twitter: 'vivekpal0x',
+      github: 'catalyst-crosschain',
       nuxt: {
         label: 'Nuxt',
         icon: 'simple-icons:nuxtdotjs',
