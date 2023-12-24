@@ -1,0 +1,5 @@
+[install]
+registry = { url = "https://registry.npmjs.org", token ="$NPM_GITHUB_TOKEN" }
+
+[install.scopes]
+"@catalyst" = { url = "https://npm.pkg.github.com", token = "$NPM_GITHUB_TOKEN" }
