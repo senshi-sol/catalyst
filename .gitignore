@@ -41,3 +41,9 @@ yarn-error.log*
 # Added by cargo
 
 /target
+
+
+# anchor
+.anchor
+**/*.rs.bk
+test-ledger

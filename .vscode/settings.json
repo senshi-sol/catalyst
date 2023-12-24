@@ -3,5 +3,8 @@
     {
       "mode": "auto"
     }
+  ],
+  "rust-analyzer.linkedProjects": [
+    "./apps/app/Cargo.toml"
   ]
 }

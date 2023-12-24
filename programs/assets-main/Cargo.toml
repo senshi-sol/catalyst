@@ -1,12 +1,13 @@
 [package]
-name = "catalyst"
+name = "assets_main"
 version = "0.1.0"
-description = "Created with Anchor"
 edition = "2021"
+license = "MIT"
+publish = false
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "catalyst"
+name = "assets_main"
 
 [features]
 no-entrypoint = []

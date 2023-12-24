@@ -1,0 +1,18 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+catalyst = "11111111111111111111111111111111"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "PATH_TO_WALLET_ID"
+
+[scripts]
+test = "bun run ts-mocha -p ./apps/app/tsconfig.json -t 1000000 apps/app/tests/**/*.ts"
